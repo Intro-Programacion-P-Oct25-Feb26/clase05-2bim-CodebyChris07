@@ -12,9 +12,8 @@ import paquete02.DatoTrabajo;
  */
 public class Informe {
 
-    public static void imprimir(String a, String b, String c, double d, double[] e) {
-        String nombreDeEmpresa = DatoTrabajo.obtenerNombreEmpresa();
-        String direccionEmpresa = DatoTrabajo.obtenerDireccionEmpresa();
+    public static void imprimir(String a, String b, String c, String n, String g, 
+            double d, double[] e) {
         String mensaje = String.format("Los datos ingresados son:\n"
                 + "Nombre: %s\n"
                 + "Apellido: %s\n"
@@ -26,8 +25,8 @@ public class Informe {
                 a,
                 b,
                 c,
-                nombreDeEmpresa,
-                direccionEmpresa,
+                n,
+                g,
                 d);
         for (int i = 0; i < e.length; i++) {
             mensaje += String.format("%.2f\n", e[i]);

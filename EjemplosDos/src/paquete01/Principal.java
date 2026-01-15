@@ -10,7 +10,7 @@ import paquete03.DatosUbicacion;
 import paquete04.DatoAcademico;
 import paquete05.DatoFinal;
 import paquete06.Informe;
-
+import paquete02.DatoTrabajo;
 /**
  *
  * @author reroes
@@ -30,7 +30,10 @@ public class Principal {
         ciudad = DatosUbicacion.obtenerCiudad();
         misNotas = DatoAcademico.obtenerNotas(4);
         promedio = DatoFinal.obtenerPromedio(misNotas);
-        Informe.imprimir(nombre, apellidoRetornado, ciudad, promedio, misNotas);
+        String nombreDeEmpresa = DatoTrabajo.obtenerNombreEmpresa();
+        String direccionEmpresa = DatoTrabajo.obtenerDireccionEmpresa();
+        Informe.imprimir(nombre, apellidoRetornado, ciudad, nombreDeEmpresa, 
+                direccionEmpresa, promedio, misNotas);
         
     }
     
