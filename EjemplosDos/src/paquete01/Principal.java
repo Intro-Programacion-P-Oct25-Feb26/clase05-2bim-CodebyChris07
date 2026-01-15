@@ -9,6 +9,7 @@ import paquete02.DatoPersonal;
 import paquete03.DatosUbicacion;
 import paquete04.DatoAcademico;
 import paquete05.DatoFinal;
+import paquete06.Informe;
 
 /**
  *
@@ -29,17 +30,15 @@ public class Principal {
         ciudad = DatosUbicacion.obtenerCiudad();
         misNotas = DatoAcademico.obtenerNotas(4);
         promedio = DatoFinal.obtenerPromedio(misNotas);
+        Informe.imprimir(nombre, apellidoRetornado, ciudad, promedio, misNotas);
         
-        
-        System.out.printf("Los datos ingresados son:\n"
-                + "Nombre: %s\n"
-                + "Apellido: %s\n"
-                + "Ciudad: %s\n"
-                + "Promedio: %.2f\n",
-                nombre,
-                apellidoRetornado,
-                ciudad,
-                promedio);
     }
     
 }
+/*
+Solicitar datos de a una persona (nombre, apellido, ciudad, y 3 notas), y se 
+saca un promedio las cuales van a ser realizadas por diferentes clases por un 
+import, en estas clases se van a realizar funciones las cuales van a ser 
+devuetlas al principal luego se presentar un reporte de los datos ingresados, 
+junto con el promedio
+*/
